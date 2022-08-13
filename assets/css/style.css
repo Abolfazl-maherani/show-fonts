@@ -1,0 +1,138 @@
+
+@font-face {
+    font-family: "IRANSans";
+    src: url('../font/IRANSansWeb.woff');
+    font-style: normal;
+    font-weight: 400;
+
+}
+button:hover, button:focus {
+    outline: none;
+}
+* {
+    font-family: "IRANSans";
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+    transition: opacity .3s ease;
+}
+
+body,
+html {
+    background-color: #ddd;
+    direction: rtl;
+    font-size:14px;
+}
+.body-tab{
+    padding: 0 25px;
+}
+#main-box {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.radif,
+.type {
+    text-align: center;
+}
+
+.table td,
+th {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 20px 0px;
+}
+
+.text {
+    font-size: 1.2em;
+}
+
+.box-modal {
+    width: calc(100% - 200px);
+    height: calc(100vh - 100px);
+    min-height: 500px;
+    overflow-y: auto;
+}
+
+#alert-empty,
+#alert {
+    opacity: 0;
+}
+
+#alert-empty.active,
+#alert.active {
+    opacity: 1;
+}
+
+th {
+    overflow: visible;
+}
+.table tr:not(:first-child) td{
+    border-top:2px solid #ddd;
+
+}
+.font_name .family{
+    padding:5px 10px;
+    background: #f1f1f1;
+    color:#444;
+    border-radius: 20px;
+}
+.count-font {
+    padding: 5px 10px;
+    font-weight: 100;
+    color: #444;
+    border-radius: 6px;
+    background-color: #ddd;
+    font-size: .8em;
+    display: block;
+
+}
+.loader{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f1f1f1;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loader-active{
+    overflow: hidden;
+}
+.loader img{
+    max-width: 40px;
+}
+.loader>div::after{
+    content: "";
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid #52ba80;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+    position: absolute;
+    left: calc(50% - 3rem);
+    top: calc(50% - 3rem);
+}
+.copy{
+    outline: 0;
+    padding: 3px 8px;
+    border-radius: 20px;
+    display: inline-block;
+    background: #ccc;
+
+}
+.copy svg{
+    fill:#fff;
+}
+.add-fav svg{
+    fill: #ffad40;
+}
